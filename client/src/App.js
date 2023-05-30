@@ -3,7 +3,7 @@ import { Home, Form, Detail, Landing } from './Views'
 import NavBar from './Components/NavBar/NavBar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import axios from 'axios';
-axios.defaults.baseURL = 'https://deploy-countries-production-7c52.up.railway.app'
+// axios.defaults.baseURL = 'https://deploy-countries-production-7c52.up.railway.app'
 function App() {
   const location = useLocation()
   return (
