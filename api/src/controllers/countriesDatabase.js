@@ -1,6 +1,6 @@
 const axios = require('axios')
 const { Country } = require('../db.js');
-const dataCountriesJson = require('../../../countries.json')
+const dataCountriesJson = require('../countries.json')
 require('dotenv').config();
 
 const countriesDatabase = async (req, res) => {
