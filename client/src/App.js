@@ -3,13 +3,12 @@ import { Home, Form, Detail, Landing } from './Views'
 import NavBar from './Components/NavBar/NavBar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001'
+axios.defaults.baseURL = 'https://deploy-countries-production-7c52.up.railway.app'
 function App() {
   const location = useLocation()
   return (
     <div className="App">
       {location.pathname !== '/' && <NavBar />}
-      {/* {location.pathname !== '/' && !location.pathname.startsWith('/detail/') && <SearchBar />} */}
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} />
