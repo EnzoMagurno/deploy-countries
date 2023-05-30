@@ -5,12 +5,15 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './Redux/store'
+import axios from 'axios';
+axios.defaults.baseURL = 'https://deploy-countries-production-7c52.up.railway.app'
+
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-<Provider store={store}>
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>
-</Provider>
+	<Provider store={store}>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</Provider>
 );
