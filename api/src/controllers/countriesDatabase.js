@@ -3,7 +3,8 @@ const dataCountriesJson = require('../countries.json')
 require('dotenv').config();
 const countriesDatabase = async (req, res) => {
     try {
-        const data = dataCountriesJson.map(country => {
+        const response = await (axios.get(dataCountriesJson)).data
+        const data = response.map(country => {
             let capital = country?.capital;
             if (typeof capital === 'string') {
                 capital = [capital];
